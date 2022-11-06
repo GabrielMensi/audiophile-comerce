@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-//images
-import speakerMobile from "../../images/home/mobile/image-speaker-zx7.jpg";
-import speakerx7 from "../../images/home/desktop/image-speaker-zx7.jpg";
+//public/images
+import speakerMobile from "../../public/images/home/mobile/image-speaker-zx7.jpg";
+import speakerx7 from "../../public/images/home/desktop/image-speaker-zx7.jpg";
 
 const Promocion2 = () => {
   return (

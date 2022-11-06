@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { incrementProduct, decrementProduct, removeAll } from "../reducers/cart/cartSlice";
 import { NavLink } from "react-router-dom";
-//images
-import emptyCart from '../../images/cart/empty-cart.png';
+//public/images
+import emptyCart from '../../public/images/cart/empty-cart.png';
 
 const Cart = ({activeCart, setActiveCart}) => {
 

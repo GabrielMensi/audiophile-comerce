@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-//Images
-import speakerx9 from "../../images/home/desktop/image-speaker-zx9.png";
-import circles from "../../images/home/desktop/pattern-circles.svg";
+//public/images
+import speakerx9 from "../../public/images/home/desktop/image-speaker-zx9.png";
+import circles from "../../public/images/home/desktop/pattern-circles.svg";
 
 const Promocion1 = () => {
 

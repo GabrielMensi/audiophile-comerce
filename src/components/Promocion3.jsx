@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { NavLink, useParams } from "react-router-dom";
-//images
-import earphonesYx1Mobile from "../../images/home/mobile/image-earphones-yx1.jpg";
-import earphonesYx1 from "../../images/home/desktop/image-earphones-yx1.jpg";
+//public/images
+import earphonesYx1Mobile from "../../public/images/home/mobile/image-earphones-yx1.jpg";
+import earphonesYx1 from "../../public/images/home/desktop/image-earphones-yx1.jpg";
 
 const Promocion3 = () => {
 

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 //Hero Image
-import heroDesktop from "../../images/home/desktop/image-hero.jpg";
-import heroTablet from "../../images/home/tablet/image-hero.jpg";
-import heroMobile from "../../images/home/mobile/image-hero.jpg";
+import heroDesktop from "../../public/images/home/desktop/image-hero.jpg";
+import heroTablet from "../../public/images/home/tablet/image-hero.jpg";
+import heroMobile from "../../public/images/home/mobile/image-hero.jpg";
 //Components
 import Category from "../components/Category";
 import HeroTitle from "../components/HeroTitle";

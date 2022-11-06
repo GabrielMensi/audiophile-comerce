@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-//Images
-import facebook from "../../images/shared/desktop/icon-facebook.svg";
-import instagram from "../../images/shared/desktop/icon-instagram.svg";
-import twitter from "../../images/shared/desktop/icon-twitter.svg";
-import logo from "../../images/shared/desktop/logo.svg";
+//public/images
+import facebook from "../../public/images/shared/desktop/icon-facebook.svg";
+import instagram from "../../public/images/shared/desktop/icon-instagram.svg";
+import twitter from "../../public/images/shared/desktop/icon-twitter.svg";
+import logo from "../../public/images/shared/desktop/logo.svg";
 
 
 const Footer = () => {

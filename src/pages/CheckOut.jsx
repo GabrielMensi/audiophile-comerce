@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-//images
-import cash from '../../images/checkout/icon-cash-on-delivery.svg';
-import check from "../../images/shared/desktop/icon-check-mark.svg";
+//public/images
+import cash from '../../public/images/checkout/icon-cash-on-delivery.svg';
+import check from "../../public/images/shared/desktop/icon-check-mark.svg";
 
 const CheckOut = () => {
 

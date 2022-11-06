@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 //Components
 import Cart from "./Cart";
 //iamges
-import menu from "../../images/shared/tablet/icon-hamburger.svg";
-import close from "../../images/shared/tablet/icon-close-menu.svg";
-import logo from "../../images/shared/desktop/logo.svg";
-import cart from "../../images/shared/desktop/icon-cart.svg";
+import menu from "../../public/images/shared/tablet/icon-hamburger.svg";
+import close from "../../public/images/shared/tablet/icon-close-menu.svg";
+import logo from "../../public/images/shared/desktop/logo.svg";
+import cart from "../../public/images/shared/desktop/icon-cart.svg";
 import Category from "./Category";
 
 const NavBar = () => {

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-//Images
-import headphones from "../../images/shared/desktop/image-headphones.png";
-import speakers from "../../images/shared/desktop/image-speakers.png";
-import earphones from "../../images/shared/desktop/image-earphones.png";
-import rightArrow from "../../images/shared/desktop/icon-arrow-right.svg";
+//public/images
+import headphones from "../../public/images/shared/desktop/image-headphones.png";
+import speakers from "../../public/images/shared/desktop/image-speakers.png";
+import earphones from "../../public/images/shared/desktop/image-earphones.png";
+import rightArrow from "../../public/images/shared/desktop/icon-arrow-right.svg";
 
 const Category = () => {
   return (

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import '../index.css';
-//images
-import aboutImgDesktop from "../../images/shared/desktop/image-best-gear.jpg";
-import aboutImgTablet from "../../images/shared/tablet/image-best-gear.jpg";
-import aboutImgMobile from "../../images/shared/mobile/image-best-gear.jpg";
+//public/images
+import aboutImgDesktop from "../../public/images/shared/desktop/image-best-gear.jpg";
+import aboutImgTablet from "../../public/images/shared/tablet/image-best-gear.jpg";
+import aboutImgMobile from "../../public/images/shared/mobile/image-best-gear.jpg";
 
 const About = () => {
   return (
