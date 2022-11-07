@@ -10,6 +10,7 @@ const Cart = ({activeCart, setActiveCart}) => {
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
+
   return (
     <>
     <Modal onClick={()=> setActiveCart(!activeCart)}></Modal>
