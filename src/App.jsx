@@ -13,19 +13,21 @@ import CategoryPage from './pages/CategoryPage'
 import ProductPage from './pages/ProductPage';
 import CheckOut from './pages/CheckOut';
 import { useEffect } from 'react';
+import Formulario from "./components/Formulario";
 
 function App() {
 
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
   
-  useEffect(() => {
+  useEffect(() => { // set cart to local storage if it exists
     const data = localStorage.getItem('cart');
     if (data) {
       dispatch(setCart(JSON.parse(data)));
     }
   }, []);
-  useEffect(() => {
+  
+  useEffect(() => { // This saves the cart to local storage every time it changes
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
@@ -35,7 +37,8 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path= "/check-out" element={<CheckOut/>} />
+        {/* <Route path= "/check-out" element={<CheckOut/>} /> */}
+        <Route path= "/check-out" element={<CheckOut />} />
         <Route path="/:category" element={<CategoryPage productsList={ productsList }/>} />
         <Route path='/:categoy/:product' element={<ProductPage productsList={ productsList }/>} />
       </Routes>
