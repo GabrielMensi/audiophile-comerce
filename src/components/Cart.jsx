@@ -55,9 +55,9 @@ const Cart = ({activeCart, setActiveCart}) => {
           <h3>{`TOTAL: $ ${cart.totalPrice}`}</h3>
           <NavLink to={cart.totalQuantity > 0 ? '/check-out' : '/'}><button className="checkout" onClick={()=> setActiveCart(!activeCart)}>CHECKOUT</button></NavLink>
         </div>
-      {/* <Toaster 
-        position="top-left"
-        /> */}
+        <Toaster 
+          position="top-left"
+        />
       </CartContainer>
       </>
   );
