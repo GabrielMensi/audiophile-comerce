@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 //components
 import Card from "../components/Card";
@@ -10,6 +11,10 @@ const CategoryPage = ({ productsList }) => {
 
   const { category } = useParams();
   const products = productsList.filter((product) => product.category === category).sort( product => product.new ? -1 : 1);
+
+  useEffect(() => { //scroll to top on page load
+    window.scrollTo(0, 0);
+  }, [category]);
 
   return (
     <>

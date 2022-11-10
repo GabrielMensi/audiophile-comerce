@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { addProduct } from "../reducers/cart/cartSlice";
+import toast, { Toaster } from 'react-hot-toast';
 
 //Components
 import OthersCard from "../components/OthersCard";
@@ -14,11 +15,12 @@ const ProductPage = ({ productsList }) => {
   const navigate = useNavigate();
   const { product } = useParams(); // get the product slug from the url
   const productData = productsList.find((item) => item.slug === product); // find the product data from the products list
-  
-  const items = useSelector((state) => state.cart.items); // get the array of the products in the cart
+  const notify = () => toast.success('Product added to cart!');
+
   const dispatch = useDispatch();
   const addToCart = ( productData ) => {
     dispatch(addProduct(productData));
+    notify();
   };
 
   // Quantity hablders
@@ -33,6 +35,10 @@ const ProductPage = ({ productsList }) => {
       setQuantity(quantity - 1);
     }
   };
+ 
+  useEffect(()=> { //Restore scroll
+    window.scrollTo(0,0);
+  }, [productData])
 
 
   return (
@@ -107,7 +113,12 @@ const ProductPage = ({ productsList }) => {
       <Category />
       <About />
     </Container>
+    <Toaster 
+      position="top-left"
+      reverseOrder={false} 
+      />
     </>
+    
   )
 }
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { incrementProduct, decrementProduct, removeAll } from "../reducers/cart/cartSlice";
 import { NavLink } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 //public/images
 import emptyCart from '../../public/images/cart/empty-cart.png';
 
@@ -9,7 +10,12 @@ const Cart = ({activeCart, setActiveCart}) => {
 
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
+  const notifyRemoved = () => toast.success('Product removed from cart');
 
+  const handleRemoveAll = () => {
+    dispatch(removeAll());
+    notifyRemoved();
+  }
 
   return (
     <>
@@ -18,7 +24,7 @@ const Cart = ({activeCart, setActiveCart}) => {
         <div className="title">
           <h1>{`CART (${cart.totalQuantity})`}</h1>
           <button
-            onClick={() => dispatch(removeAll())}
+            onClick={() => handleRemoveAll()}
             className="remove-all">Remove All</button>
         </div>
         <div className="cart-items">
@@ -47,8 +53,11 @@ const Cart = ({activeCart, setActiveCart}) => {
         </div>
         <div className="total">
           <h3>{`TOTAL: $ ${cart.totalPrice}`}</h3>
-          <NavLink to='/check-out'><button className="checkout" onClick={()=> setActiveCart(!activeCart)}>CHECKOUT</button></NavLink>
+          <NavLink to={cart.totalQuantity > 0 ? '/check-out' : '/'}><button className="checkout" onClick={()=> setActiveCart(!activeCart)}>CHECKOUT</button></NavLink>
         </div>
+      {/* <Toaster 
+        position="top-left"
+        /> */}
       </CartContainer>
       </>
   );
